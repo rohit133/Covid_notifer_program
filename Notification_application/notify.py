@@ -23,15 +23,15 @@ if (covidData != None):
             #title of the notification,
             title = "COVID19 Stats on {}".format(datetime.date.today()),
             #the body of the notification
-            message = "Total cases : {totalcases}\nToday cases : {todaycases}\nToday deaths :{todaydeaths}\nTotal active :{active}\n Recovered: {recovered}".format(
+            message = "Total cases : {totalcases}\nToday cases : {todaycases}\nToday deaths :{todaydeaths}\nTotal active :{active}\n Recovered : {recoveredCase}".format(
                         totalcases = data['cases'],
                         todaycases = data['todayCases'],
                         todaydeaths = data['todayDeaths'],
-                        active = data["active"],  
-                        recovered = data['recovered']),
+                        active = data['active'],  
+                        recoveredCase = data["recovered"]),
             #creating icon for the notification
             #we need to download a icon of ico file format
-            app_icon = "Paomedia-Small-N-Flat-Bell.ico",
+            app_icon = "bell-Icon.ico",
             # the notification stays for 50sec
             timeout  = 50
         )
